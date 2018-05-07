@@ -1,6 +1,7 @@
 package Sorting;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 public class SortingUtility
@@ -61,6 +62,23 @@ public class SortingUtility
     static int[] provideInput()
     {
         int arr[] = {1000, 110, 20, 2, 30, 1, 29, 10, 340, 3, 65, 34, 23, 422, -100, 1};
+        return arr;
+    }
+
+
+    public static int[] overRideArray()
+    {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the element count");
+        int arr[] = null;
+        System.out.println("Please enter proper integer array length:");
+        int numberC = s.nextInt();
+        arr = new int[numberC];
+        for (int i = 0; i < numberC; i++)
+        {
+            System.out.println("Please enter proper integer number");
+            arr[i] = s.nextInt();
+        }
         return arr;
     }
 }

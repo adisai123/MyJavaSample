@@ -23,46 +23,38 @@ public class SortingApplication
                 case "0" :
                     break;
                 case "1" :
-                    arr = SortingUtility.provideInput();
                     print("InPut", arr);
                     SortingAlgorithms.bubbleSort(arr);
                     print("OutPut", arr);
                     break;
                 case "2" :
-                    arr = SortingUtility.provideInput();
                     print("InPut", arr);
                     SortingAlgorithms.selectionSort(arr);
                     print("OutPut", arr);
                     break;
                 case "3" :
-                    arr = SortingUtility.provideInput();
                     print("InPut", arr);
                     SortingAlgorithms.evenOdd(arr);
                     print("OutPut", arr);
                     break;
                 case "4" :
-                    arr = SortingUtility.provideInput();
-                    print("InPut", arr);
                     SortingAlgorithms.insertionSort(arr);
                     print("OutPut", arr);
                     break;
                 case "5" :
-                    arr = SortingUtility.provideInput();
-                    print("InPut", arr);
                     SortingAlgorithms.bidirectionBubbleSort(arr);
                     print("OutPut", arr);
                     break;
                 case "6" :
-                    arr = SortingUtility.provideInput();
-                    print("InPut", arr);
                     SortingAlgorithms.gnomeSort(arr);
                     print("OutPut", arr);
                     break;
                 case "7" :
-                    arr = SortingUtility.provideInput();
-                    print("InPut", arr);
                     SortingAlgorithms.quickSort(arr);
                     print("OutPut", arr);
+                    break;
+                case "R" :
+                    arr = SortingUtility.overRideArray();
                     break;
                 default :
                     arr = SortingUtility.provideInput();
@@ -84,7 +76,8 @@ public class SortingApplication
         System.out.println("5      ->   bidirectionBubble-Sort");
         System.out.println("6      ->   gnome-Sort");
         System.out.println("7      ->   Quick-Sort");
-        System.out.println("AnyKey ->   Print-Inputs");
+        System.out.println("AnyKey ->   Print and Override with default Inputs");
+        System.out.println("R      ->   Override existing Inputs");
         System.out.println("0      ->   Exit");
     }
 
