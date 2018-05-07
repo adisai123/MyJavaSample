@@ -8,7 +8,7 @@ import java.lang.instrument.Instrumentation;
  * @author aditya.malpani
  *
  */
-public class javaObjectSize
+public class JavaObjectSize
 {
 
     private static volatile Instrumentation myInstrument;
@@ -40,7 +40,7 @@ public class javaObjectSize
 
     public static void main(String[] args)
     {
-        javaObjectSize j = new javaObjectSize();
+        JavaObjectSize j = new JavaObjectSize();
         System.out.println(InstrumentationAgent.getObjectSize(j));
     }
 }

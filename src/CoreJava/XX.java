@@ -1,5 +1,5 @@
 package CoreJava;
 
-interface xx
+public interface XX
 {
 }

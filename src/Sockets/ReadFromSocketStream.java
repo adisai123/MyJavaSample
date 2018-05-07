@@ -11,13 +11,13 @@ import java.net.Socket;
  * @author aditya.malpani
  *
  */
-public class readFromSocketStream extends Thread
+public class ReadFromSocketStream extends Thread
 {
 
     Socket s;
 
 
-    public readFromSocketStream(Socket s)
+    public ReadFromSocketStream(Socket s)
     {
         this.s = s;
     }

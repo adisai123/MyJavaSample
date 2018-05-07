@@ -1,11 +1,11 @@
-package Problems;
+package multithreading;
 
 /**
  * 
  * @author aditya.malpani
  *
  */
-public class volatileTest implements Runnable
+public class VolatileTest implements Runnable
 {
 
     volatile static int static_v;
@@ -55,8 +55,8 @@ class XX
 
     public static void main(String[] args)
     {
-        volatileTest t = new volatileTest();
-        volatileTest t2 = new volatileTest();
+        VolatileTest t = new VolatileTest();
+        VolatileTest t2 = new VolatileTest();
         for (int i = 0; i < 100000; i++)
         {
             Thread t1 = new Thread(t);

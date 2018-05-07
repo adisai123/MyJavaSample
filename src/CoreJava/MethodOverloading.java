@@ -5,12 +5,12 @@ package CoreJava;
  * @author aditya.malpani
  *
  */
-public class methodOverloading
+public class MethodOverloading
 {
 
     public static void main(String[] args)
     {
-        methodOverloading m = new methodOverloading();
+        MethodOverloading m = new MethodOverloading();
         m.mm(1, 1);
     }
 

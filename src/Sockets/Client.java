@@ -11,7 +11,7 @@ import java.net.Socket;
  * @author aditya.malpani
  *
  */
-public class client
+public class Client
 {
 
     public static void main(String[] args)
@@ -25,7 +25,7 @@ public class client
             // ServerSocket s = new ServerSocket(8081);
             // Socket reader = s.accept();
             new WriteToSocketStream(writer, clientName).start();
-            new readFromSocketStream(writer).start();
+            new ReadFromSocketStream(writer).start();
         }
         catch (IOException e)
         {

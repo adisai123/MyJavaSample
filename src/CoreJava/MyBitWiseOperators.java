@@ -5,7 +5,7 @@ package CoreJava;
  * @author aditya.malpani
  *
  */
-public class MuyBitWiseOperators
+public class MyBitWiseOperators
 {
 
     public static void main(String[] args)

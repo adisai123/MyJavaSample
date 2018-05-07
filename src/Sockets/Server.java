@@ -23,7 +23,7 @@ public class Server
             {
                 Socket reader = s.accept();
                 new WriteToSocketStream(reader, "server").start();
-                new readFromSocketStream(reader).start();
+                new ReadFromSocketStream(reader).start();
             }
         }
         catch (IOException e)

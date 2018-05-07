@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author aditya.malpani
  *
  */
-public class javacloneExample implements Serializable, Cloneable
+public class JavacloneExample implements Serializable, Cloneable
 {
 
     /**
@@ -23,14 +23,14 @@ public class javacloneExample implements Serializable, Cloneable
     b b1;
 
 
-    public javacloneExample()
+    public JavacloneExample()
     {
         super();
         System.out.println("ji");
     }
 
 
-    public void readObject(javacloneExample o)
+    public void readObject(JavacloneExample o)
     {
         o.b1 = b1;
     }
@@ -40,15 +40,15 @@ public class javacloneExample implements Serializable, Cloneable
     {
         b b11 = new b();
         b11.i = 11;
-        javacloneExample j = new javacloneExample();
+        JavacloneExample j = new JavacloneExample();
         j.b1 = b11;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream obstream = new ObjectOutputStream(bos);
         obstream.writeObject(j);
-        javacloneExample jclone = (javacloneExample) j.clone();
+        JavacloneExample jclone = (JavacloneExample) j.clone();
         byte[] byteData = bos.toByteArray();
         ByteArrayInputStream bais = new ByteArrayInputStream(byteData);
-        javacloneExample deepCopy = (javacloneExample) new ObjectInputStream(bais).readObject();
+        JavacloneExample deepCopy = (JavacloneExample) new ObjectInputStream(bais).readObject();
         j.b1.i = 20;
         System.out.println("shallow copy" + jclone.b1.i);
         System.out.println("deep copy" + deepCopy.b1.i);
