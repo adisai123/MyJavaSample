@@ -1,5 +1,8 @@
 package CoreJava;
 
+import CoreJava.StaticOverriding.Child;
+
+
 public class StaticOverriding
 {
 
@@ -13,18 +16,19 @@ public class StaticOverriding
     public static void main(String[] args)
     {
         StaticOverriding s = new StaticOverriding();
-        child d = new child();
+        Child d = new Child();
         s.display();
         d.display();
+        d.main();
         // x xxy = (x) new StaticOverriding(); CoreJava.StaticOverriding cannot be cast to CoreJava.x
         x x = new x();
         x.display();
-        StaticOverriding xx = new x();
+        x xx = new x();
         xx.display();
     }
 
     // non static inner classes can not have static methods or blocks
-    static class child extends StaticOverloading
+    static class Child extends StaticOverloading
     {
 
         {
@@ -40,8 +44,10 @@ public class StaticOverriding
         }
 
 
-        void main()
+        // protected is same as default + respect Parent child irrespective of package
+        protected void main()
         {
+            System.out.println("dasd");
         }
     }
     interface xx
@@ -55,15 +61,25 @@ public class StaticOverriding
 
 
 // we can extends inner classes
-class x extends StaticOverriding
+class x extends Child
 {
 
     static void display()
     {
+        x x = new x();
         System.out.println("x");
+        x.myMain();
+        // super can not be used with the static
+        Child.display();
+    }
+
+
+    void myMain()
+    {
+        main();
     }
 }
-// class child extends StaticOverloading
+// class Child extends StaticOverloading
 // {
 // } commented this line as you can not have same class name in the same package but inner classes are possible (same is applicable for enum and
 // interface)
