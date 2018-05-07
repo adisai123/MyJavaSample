@@ -24,7 +24,7 @@ public class FindNthHigestNumber
         int n = 0;
         do
         {
-            System.out.println("Enter the number less than or equal to  " + arr.length);
+            System.out.println("Enter the number less than or equal to:  " + arr.length);
             n = s.nextInt();
         }
         while (n > arr.length && n > 0);
@@ -46,9 +46,10 @@ public class FindNthHigestNumber
 
     public static int[] overRideArray()
     {
-        System.out.println("Enter the element count");
+        System.out.println("Enter the element count:");
         int numberC = s.nextInt();
         int arr[] = new int[numberC];
+        System.out.println("Enter the elements:");
         for (int i = 0; i < numberC; i++)
         {
             arr[i] = s.nextInt();
