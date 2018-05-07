@@ -9,6 +9,15 @@ public class StaticOverriding
     static void display()
     {
         System.out.println("StaticOverriding");
+        class innerstaticClass
+        {
+            // static block is not allowed
+            // static
+            // {
+            // System.out.println("ji");
+            // }
+        }
+        new innerstaticClass();
     }
 
 
@@ -33,8 +42,18 @@ public class StaticOverriding
 
         {
             System.out.println("dsad");
+            class uiy
+            {
+            }
         }
         {
+        }
+        static
+        {
+            System.out.println("ji");
+            class uiy
+            {
+            }
         }
 
 
