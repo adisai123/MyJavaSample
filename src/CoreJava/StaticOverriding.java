@@ -55,7 +55,7 @@ public class StaticOverriding
 
 
 // we can extends inner classes
-class x extends StaticOverriding implements XX
+class x extends StaticOverriding
 {
 
     static void display()

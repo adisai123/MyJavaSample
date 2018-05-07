@@ -5,7 +5,7 @@ package CoreJava;
  * @author aditya.malpani
  *
  */
-public class assignMent
+public class Assignment
 {
     ;
 

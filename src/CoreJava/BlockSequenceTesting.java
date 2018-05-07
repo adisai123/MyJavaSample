@@ -5,7 +5,7 @@ package CoreJava;
  * @author aditya.malpani
  *
  */
-public class blockSequenceTesting
+public class BlockSequenceTesting
 {
 
     static
@@ -17,7 +17,7 @@ public class blockSequenceTesting
     }
 
 
-    public blockSequenceTesting()
+    public BlockSequenceTesting()
     {
         System.out.println("In constructor");
     }
@@ -25,7 +25,7 @@ public class blockSequenceTesting
 
     public static void main(String[] args)
     {
-        new blockSequenceTesting();
+        new BlockSequenceTesting();
         System.out.println("static main");
         try
         {
