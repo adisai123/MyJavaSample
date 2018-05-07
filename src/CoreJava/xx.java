@@ -1,0 +1,5 @@
+package CoreJava;
+
+interface xx
+{
+}
