@@ -27,7 +27,7 @@ public class OverridingException
 class ChildException extends OverridingException
 {
 
-    // throws only required when used super keyword to call super class method
+    // throws only required in case if super keyword is used to to call super class method and supper class method defined checked exception
     @Override
     public void display() throws IOException
     {
