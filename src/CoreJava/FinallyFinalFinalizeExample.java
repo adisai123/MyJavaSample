@@ -14,10 +14,10 @@ final public class FinallyFinalFinalizeExample
             {
                 // new FinallyFinalFinalizeExample().x = 100; once initialized you can not be modified.
                 final FinallyFinalFinalizeExample f = new FinallyFinalFinalizeExample();
-                // f = f; you can not assigne other object to it
+                // f = f; you can not assign other object to it
                 // f = new FinallyFinalFinalizeExample(); for
                 int x2 = f.x;
-                // f = null; will also thorws an error
+                // f = null; will also throws an error
                 f.y++; // , but its content can be changed
                 System.out.println(f.y);
                 // System.exit(1); finally block will never run
