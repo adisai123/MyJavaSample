@@ -28,6 +28,12 @@ public class MethodReference
         statics.myInterface(10);
         f instanceEx = new MethodReference()::myMethods;
         instanceEx.myInterface(10);
+        Thread t = new Thread(AnotherExample::myrun1, "thread 1");
+        Thread t2 = new Thread(new AnotherExample()::myrun2, "thread2");
+        t.run();
+        t2.run();
+        t.start();
+        t2.start();
     }
 
 
@@ -48,4 +54,22 @@ interface f
 {
 
     void myInterface(int i);
+}
+
+
+class AnotherExample
+{
+
+    public static void myrun1()
+    {
+        for (int i = 0; i < 10; i++)
+            System.out.println("run1");
+    }
+
+
+    public void myrun2()
+    {
+        for (int i = 0; i < 10; i++)
+            System.out.println("run2");
+    }
 }
