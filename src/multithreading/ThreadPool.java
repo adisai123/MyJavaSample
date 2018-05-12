@@ -36,6 +36,14 @@ public class ThreadPool implements Runnable
         Thread t6 = new Thread(threadPool);
         Thread t7 = new Thread(threadPool);
         Thread t8 = new Thread(threadPool);
+        t1.setDaemon(true);
+        t2.setDaemon(true);
+        t3.setDaemon(true);
+        t4.setDaemon(true);
+        t5.setDaemon(true);
+        t6.setDaemon(true);
+        t7.setDaemon(true);
+        t8.setDaemon(true);
         executers.execute(t1);
         executers.execute(t2);
         executers.execute(t3);
