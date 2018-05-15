@@ -1,7 +1,17 @@
 package multithreading;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.Period;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import javax.swing.text.DateFormatter;
 
 
 public class ThreadPool implements Runnable
@@ -23,11 +33,14 @@ public class ThreadPool implements Runnable
 
     public static void main(String argp[]) throws InterruptedException
     {
+    	
         ExecutorService executers = Executors.newFixedThreadPool(2);
         ThreadPool threadPool = new ThreadPool();
         Thread t1 = new Thread(threadPool);
         t1.setName("t1");
+        t1.setDaemon(true);
         t1.start();
+        
         Thread t2 = new Thread(threadPool);
         t2.setName("t2");
         Thread t3 = new Thread(threadPool);
@@ -36,7 +49,7 @@ public class ThreadPool implements Runnable
         Thread t6 = new Thread(threadPool);
         Thread t7 = new Thread(threadPool);
         Thread t8 = new Thread(threadPool);
-        t1.setDaemon(true);
+        //
         t2.setDaemon(true);
         t3.setDaemon(true);
         t4.setDaemon(true);
@@ -53,7 +66,7 @@ public class ThreadPool implements Runnable
         executers.execute(t7);
         executers.execute(t7);// you can pass same thread object twice
         System.out.println("isTerminated:" + executers.isTerminated());
-        executers.shutdown(); /** This program will never stop if you comments this line **/
+        //executers.shutdown(); /** This program will never stop if you comments this line **/
         System.out.println("isShutdown" + executers.isShutdown());
         // you can not pass task to execute after the shutdown method is called
         /*

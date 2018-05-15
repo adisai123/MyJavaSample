@@ -15,7 +15,7 @@ public class CallableExecutorTask implements Callable<Integer>
         CallableExecutorTask e = new CallableExecutorTask();
         // e.call();
         ExecutorService s = Executors.newFixedThreadPool(2);
-        Future<Integer> f = s.submit(e);
+        Future f = s.submit(e);
         System.out.println(f.get());
     }
 
