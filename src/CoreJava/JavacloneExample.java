@@ -67,7 +67,10 @@ class b implements Serializable
 
     public b()
     {
-        super();
+    	super();
+    	JavacloneExample j = new JavacloneExample();
+    	//JavacloneExample jclone = (JavacloneExample) j.clone();  you can not clone as clone is protected
+        
         System.out.println("jijjj");
     }
 

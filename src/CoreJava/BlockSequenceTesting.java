@@ -45,7 +45,7 @@ public class BlockSequenceTesting
 }
 
 
-class anotherClass
+class anotherClass extends BlockSequenceTesting
 {
 
     static
