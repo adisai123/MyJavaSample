@@ -10,6 +10,10 @@ public class CallByReference
     {
         CallByReference callByReference = new CallByReference();
         callByReference.i = 100;
+        
+        callByReference.display(callByReference);
+        System.out.println(callByReference.i);
+        callByReference.change(788);
         callByReference.display(callByReference);
         System.out.println(callByReference.i);
     }
@@ -20,6 +24,11 @@ public class CallByReference
         System.out.println(c.getIntValue());
     }
 
+    void change(int i)
+    {  
+    	 i=i+100;//changes will be in the local variable only  
+    	 this.i=i;//will reflect with the help of this
+   }  
 
     private int getIntValue()
     {
