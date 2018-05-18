@@ -10,7 +10,7 @@ public class LambdaTest
         y y = (int a, int b) -> {
             return a + b;
         };
-        System.out.println(y.mytest(10, 20));
+        System.out.println(y.mytest(10, 200));
     }
 }
 
