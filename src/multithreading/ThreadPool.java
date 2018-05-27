@@ -10,6 +10,25 @@ public class ThreadPool implements Runnable
     static int count;
 
 
+    public void display()
+    {
+        System.out.println(this.hashCode());
+    }
+
+
+    public ThreadPool()
+    {
+        try
+        {
+            System.out.println(10 / 0);
+        }
+        catch (Exception e)
+        {
+            System.err.println(e.getMessage());
+        }
+    }
+
+
     @Override
     public void run()
     {
@@ -25,6 +44,7 @@ public class ThreadPool implements Runnable
     {
         ExecutorService executers = Executors.newFixedThreadPool(2);
         ThreadPool threadPool = new ThreadPool();
+        threadPool.display();
         Thread t1 = new Thread(threadPool);
         t1.setName("t1");
         t1.setDaemon(true);
