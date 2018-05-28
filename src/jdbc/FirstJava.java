@@ -1,14 +1,17 @@
 package jdbc;
 
 import java.sql.Connection;
+import java.sql.DriverAction;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
 
+import com.mysql.jdbc.Driver;
 
-public class FirstJava
+
+public class FirstJava implements DriverAction
 {
 
     public static void main(String[] args)
@@ -31,10 +34,34 @@ public class FirstJava
             {
                 System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3));
             }
+            Driver driver = new com.mysql.jdbc.Driver();
+            // Creating Action Driver
+            DriverAction da = new FirstJava();
+            // Registering driver by passing driver and driverAction
+            DriverManager.registerDriver(driver, da);
+            // Creating connection
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mytest", "root", "password");
+            Statement stmt = con.createStatement();
+            // Executing SQL query
+            rs = stmt.executeQuery("select * from employee");
+            while (rs.next())
+            {
+                System.out.println(rs.getInt(1) + "" + rs.getString(2) + "" + rs.getString(3));
+            }
+            // Closing connection
+            DriverManager.deregisterDriver(driver);
+            con.close();
         }
         catch (ClassNotFoundException | SQLException e)
         {
             e.printStackTrace();
         }
+    }
+
+
+    @Override
+    public void deregister()
+    {
+        System.out.println("Driver deregistered");
     }
 }

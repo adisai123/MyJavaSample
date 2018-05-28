@@ -28,7 +28,7 @@ public class Reduce
         DoubleSummaryStatistics t = d.stream().map(s -> s.i).filter(c -> c > 1999).limit(2).collect(Collectors.summarizingDouble(dd -> dd));
         // t.accept(298767689);
         // t.accept(4);
-        Map<Integer, String> testMap = new LinkedHashMap<Integer, String>();
+        Map<Integer, String> testMap = new LinkedHashMap<>();
         testMap = d.stream().collect(Collectors.toMap(p -> p.i, p -> p.name));
         Comparator<String> s = (ss, yy) -> {
             return ss.compareTo(yy);
