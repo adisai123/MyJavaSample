@@ -8,7 +8,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 
-public class Skeleton extends UnicastRemoteObject implements MyRMIInteface
+public class MyRemoteClass extends UnicastRemoteObject implements MyRMIInteface
 {
 
     /**
@@ -17,7 +17,7 @@ public class Skeleton extends UnicastRemoteObject implements MyRMIInteface
     private static final long serialVersionUID = 1L;
 
 
-    public Skeleton() throws RemoteException
+    public MyRemoteClass() throws RemoteException
     {
         super();
     }
@@ -37,7 +37,7 @@ public class Skeleton extends UnicastRemoteObject implements MyRMIInteface
 
     public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException, AlreadyBoundException
     {
-        Skeleton s = new Skeleton();
+        MyRemoteClass s = new MyRemoteClass();
         Naming.rebind("rmi://localhost:5000/aditya", s);
         // Skeleton sub = (Skeleton) Naming.lookup("rmi://localhost:5000/aditya");
         // System.out.println(sub.add());

@@ -12,7 +12,7 @@ public class MyRMIServer
 
     public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException, AlreadyBoundException
     {
-        MyRMIInteface s = new Skeleton();
+        MyRMIInteface s = new MyRemoteClass();
         Naming.rebind("rmi://localhost:5000/aditya", s);
         // Skeleton sub = (Skeleton) Naming.lookup("rmi://localhost:5000/aditya");
         // System.out.println(sub.add());
