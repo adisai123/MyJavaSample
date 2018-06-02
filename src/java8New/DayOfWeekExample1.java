@@ -6,6 +6,11 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 
 
+/**
+ * 
+ * @author aditya.malpani
+ *
+ */
 public class DayOfWeekExample1
 {
 
@@ -14,7 +19,7 @@ public class DayOfWeekExample1
         DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
         // LocalDate localDate = LocalDate.of(2016, 03, 31);
         // LocalDate localDate = LocalDate.now();
-        LocalDateTime localDate = LocalDateTime.parse("31-Mar-2016 00:00:00", df);
+        LocalDateTime localDate = LocalDateTime.parse(" 31-Mar-2016 00:00:00  ".trim(), df);
         System.out.println(localDate);
         DayOfWeek dayOfWeek = DayOfWeek.of(2);
         localDate = localDate.with(TemporalAdjusters.next(dayOfWeek));
