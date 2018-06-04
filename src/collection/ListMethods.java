@@ -43,9 +43,9 @@ public class ListMethods
             System.out.println(iterator.next());
         }
         System.out.println("-0000-----------");
-        for (java.util.ListIterator<String> sss = linkedList.listIterator(); sss.hasNext();)
+        for (java.util.ListIterator<String> sss = linkedList.listIterator(); sss.hasPrevious();)
         {
-            System.out.println(sss.next());
+            System.out.println(sss.previous());
             // System.out.println(sss.previous());
             // sss.remove();
             sss.add("asdasd");

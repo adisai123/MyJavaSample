@@ -21,6 +21,7 @@ public class TypeReferenrence
         TypeReferenrence tf = new TypeReferenrence();
         tf.name(l);
         l.forEach(tf::names);
+        System.out.println("hashcode" + l.hashCode());
     }
 
 
